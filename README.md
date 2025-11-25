@@ -1,4 +1,4 @@
-# 🤖 AI Recruiter Agency
+<img width="2888" height="122" alt="image" src="https://github.com/user-attachments/assets/4edeba8b-b99e-4647-a9ed-b2861f79a897" /># 🤖 AI Recruiter Agency
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
@@ -25,15 +25,8 @@
 
 The system follows a **sequential multi-agent architecture** managed by a central Orchestrator.
 
-```mermaid
-graph LR
-    A[User Upload] --> B[Orchestrator]
-    B --> C[Extractor Agent]
-    C --> D[Analyzer Agent]
-    D --> E[Matcher Agent]
-    E --> F[Screener Agent]
-    F --> G[Recommender Agent]
-    G --> H[Final Report]
+<img width="2888" height="122" alt="Untitled diagram-2025-11-25-123822" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" />
+
 
 ✨ Key Features
 📄 PDF Resume Parsing: Uses pdfminer.six to accurately extract text from PDF documents.
