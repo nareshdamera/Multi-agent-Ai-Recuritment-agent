@@ -1,53 +1,141 @@
-
-
-# 🤖 AI Recruiter Agency
-
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
-![Gemini AI](https://img.shields.io/badge/AI-Gemini%201.5-orange?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-**AI Recruiter Agency** is an intelligent, multi-agent recruitment system that automates the candidate evaluation process. Powered by **Google Gemini 1.5** and **Streamlit**, it orchestrates a team of specialized AI agents to extract, analyze, match, screen, and recommend candidates based on their PDF resumes.
-
----
-
-## 📖 Table of Contents
-- [Architecture](#-architecture)
-- [Key Features](#-key-features)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Agent Workflow](#-agent-workflow)
-
----
-
-## 🏗 Architecture
-
-The system follows a **sequential multi-agent architecture** managed by a central Orchestrator.
-
-<img width="2888" height="122" alt="Untitled diagram-2025-11-25-123822" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" />
+🤖 AI Recruiter Agency
 
 
 
+
+
+
+
+
+AI Recruiter Agency is an intelligent, multi-agent recruitment system that automates the candidate evaluation process.
+Powered by Google Gemini 1.5 and Streamlit, it orchestrates a team of specialized AI agents to extract, analyze, match, screen, and recommend candidates based on their PDF resumes.
+
+📖 Table of Contents
+
+Architecture
+
+Key Features
+
+Installation
+
+Configuration
+
+Agent Workflow
+
+🏗 Architecture
+
+The system follows a sequential multi-agent architecture managed by a central Orchestrator.
+
+<p align="center"> <img width="900" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" /> </p>
 ✨ Key Features
-📄 PDF Resume Parsing: Uses pdfminer.six to accurately extract text from PDF documents.
+📄 PDF Resume Parsing
 
-🔍 Deep Skill Analysis: The Analyzer Agent breaks down technical skills, experience level, and education.
+Uses pdfminer.six for precise text extraction from candidate resumes.
 
-🎯 Intelligent Job Matching: The Matcher Agent compares candidate profiles against a database of open positions to calculate compatibility scores.
+🔍 Deep Skill Analysis
 
-🛡️ Automated Screening: The Screener Agent performs a qualitative "HR Screen" to identify red flags, cultural fit, and gaps.
+The Analyzer Agent evaluates:
 
-💡 Strategic Recommendations: The Recommender Agent synthesizes all data to provide a final "Hire/No Hire" verdict with specific next steps.
+Technical skills
 
-📊 Interactive UI: A clean Streamlit interface to visualize every stage of the AI's reasoning process.
+Experience level
 
+Education
 
+Project depth & relevance
+
+🎯 Intelligent Job Matching
+
+The Matcher Agent compares:
+
+Candidate profile
+
+Available job database
+
+Skill match score
+
+Experience fit
+
+🛡 Automated Screening
+
+The Screener Agent conducts an AI-driven HR screening:
+
+Identifies red flags
+
+Checks gaps in experience
+
+Evaluates communication clarity
+
+Assesses cultural fit
+
+💡 Strategic Recommendations
+
+The Recommender Agent provides:
+
+Hire/No-Hire decision
+
+Strengths & weaknesses
+
+Improvement suggestions
+
+Recommended job roles
+
+📊 Interactive UI
+
+Built using Streamlit, showing:
+
+Extracted resume text
+
+Skill breakdown
+
+Matching score
+
+Final recommendation
 
 ⚙ Configuration
-To run the AI agents, you need a valid Google Gemini API Key.
 
-Open agents/base_agent.py.
+To run AI agents, you must configure your Google Gemini API Key.
 
-Locate the HARDCODED_API_KEY variable.
+Open:
 
-Replace the placeholder with your actual key:
+agents/base_agent.py
+
+
+Locate the variable:
+
+HARDCODED_API_KEY = "YOUR_KEY_HERE"
+
+
+Replace the placeholder with your actual Gemini API key.
+
+🚀 Agent Workflow
+
+The orchestration pipeline works as follows:
+
+Extractor Agent
+
+Reads the uploaded PDF
+
+Converts it into raw structured text
+
+Analyzer Agent
+
+Breaks down skills, experience, education
+
+Matcher Agent
+
+Compares candidate profile with job descriptions
+
+Generates compatibility scores
+
+Screener Agent
+
+Runs HR-style screening
+
+Flags risks or inconsistencies
+
+Recommender Agent
+
+Produces the final output summary
+
+Generates the "Hire / No Hire" recommendation
