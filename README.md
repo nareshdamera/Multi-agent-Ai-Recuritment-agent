@@ -26,6 +26,8 @@ The system follows a **sequential multi-agent architecture** managed by a centra
 
 <img width="2888" height="122" alt="Untitled diagram-2025-11-25-123822" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" />
 
+
+
 ✨ Key Features
 📄 PDF Resume Parsing: Uses pdfminer.six to accurately extract text from PDF documents.
 
@@ -38,6 +40,8 @@ The system follows a **sequential multi-agent architecture** managed by a centra
 💡 Strategic Recommendations: The Recommender Agent synthesizes all data to provide a final "Hire/No Hire" verdict with specific next steps.
 
 📊 Interactive UI: A clean Streamlit interface to visualize every stage of the AI's reasoning process.
+
+
 
 ⚙ Configuration
 To run the AI agents, you need a valid Google Gemini API Key.
