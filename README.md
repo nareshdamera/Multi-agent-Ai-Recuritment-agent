@@ -1,141 +1,123 @@
-🤖 AI Recruiter Agency
+# 🤖 AI Recruiter Agency
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
+![Gemini AI](https://img.shields.io/badge/AI-Gemini%201.5-orange?style=for-the-badge&logo=google&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
+**AI Recruiter Agency** is an intelligent, multi-agent recruitment system built using **Google Gemini 1.5** and **Streamlit**.  
+It automates the candidate evaluation process through a pipeline of specialized AI agents that extract, analyze, match, screen, and recommend candidates using their PDF resumes.
 
+---
 
+## 📖 Table of Contents
+- [Architecture](#architecture)
+- [Key Features](#key-features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Agent Workflow](#agent-workflow)
 
+---
 
+## 🏗 Architecture
 
+The system follows a **sequential multi-agent architecture**, all managed by a central **Orchestrator**.
 
-AI Recruiter Agency is an intelligent, multi-agent recruitment system that automates the candidate evaluation process.
-Powered by Google Gemini 1.5 and Streamlit, it orchestrates a team of specialized AI agents to extract, analyze, match, screen, and recommend candidates based on their PDF resumes.
+<p align="center">
+  <img width="900" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" />
+</p>
 
-📖 Table of Contents
+---
 
-Architecture
+## ✨ Key Features
 
-Key Features
+### 📄 PDF Resume Parsing  
+Uses **pdfminer.six** to extract clean text from PDF resumes with high accuracy.
 
-Installation
+### 🔍 Deep Skill Analysis  
+The **Analyzer Agent** evaluates:
+- Technical skills  
+- Experience level  
+- Education  
+- Project relevance  
+- Domain expertise  
 
-Configuration
+### 🎯 Intelligent Job Matching  
+The **Matcher Agent** compares candidate strengths with job descriptions to generate:
+- Skill match percentage  
+- Experience alignment  
+- Domain compatibility  
 
-Agent Workflow
+### 🛡 Automated HR Screening  
+The **Screener Agent** performs qualitative analysis:
+- Detects red flags  
+- Identifies missing skills  
+- Evaluates cultural fit  
+- Checks communication clarity  
 
-🏗 Architecture
+### 💡 Final Recommendation  
+The **Recommender Agent** provides a decision:
+- ✔ Hire  
+- ❌ No Hire  
+- Suggestions for improvement  
+- Recommended job roles  
 
-The system follows a sequential multi-agent architecture managed by a central Orchestrator.
+### 📊 Interactive UI  
+A modern **Streamlit Web Interface** to visualize:
+- Resume text  
+- Skill breakdown  
+- Job matching score  
+- Screening summary  
+- Final verdict  
 
-<p align="center"> <img width="900" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/f8cba906-4e69-4903-8e1f-679594c3356b" /> </p>
-✨ Key Features
-📄 PDF Resume Parsing
+---
 
-Uses pdfminer.six for precise text extraction from candidate resumes.
+## ⚙ Configuration
 
-🔍 Deep Skill Analysis
+To run the AI agents, configure your **Gemini API Key**.
 
-The Analyzer Agent evaluates:
+1. Open:
 
-Technical skills
-
-Experience level
-
-Education
-
-Project depth & relevance
-
-🎯 Intelligent Job Matching
-
-The Matcher Agent compares:
-
-Candidate profile
-
-Available job database
-
-Skill match score
-
-Experience fit
-
-🛡 Automated Screening
-
-The Screener Agent conducts an AI-driven HR screening:
-
-Identifies red flags
-
-Checks gaps in experience
-
-Evaluates communication clarity
-
-Assesses cultural fit
-
-💡 Strategic Recommendations
-
-The Recommender Agent provides:
-
-Hire/No-Hire decision
-
-Strengths & weaknesses
-
-Improvement suggestions
-
-Recommended job roles
-
-📊 Interactive UI
-
-Built using Streamlit, showing:
-
-Extracted resume text
-
-Skill breakdown
-
-Matching score
-
-Final recommendation
-
-⚙ Configuration
-
-To run AI agents, you must configure your Google Gemini API Key.
-
-Open:
-
+```bash
 agents/base_agent.py
-
-
-Locate the variable:
+Find the variable:
 
 HARDCODED_API_KEY = "YOUR_KEY_HERE"
 
 
-Replace the placeholder with your actual Gemini API key.
+Replace "YOUR_KEY_HERE" with your actual Gemini API key.
 
 🚀 Agent Workflow
+1. Extractor Agent
 
-The orchestration pipeline works as follows:
+Reads and extracts raw text from the uploaded PDF.
 
-Extractor Agent
+2. Analyzer Agent
 
-Reads the uploaded PDF
+Identifies skills, education, experience, and strengths.
 
-Converts it into raw structured text
+3. Matcher Agent
 
-Analyzer Agent
+Compares candidate profile with open job roles.
 
-Breaks down skills, experience, education
+Generates match scores.
 
-Matcher Agent
+4. Screener Agent
 
-Compares candidate profile with job descriptions
+Performs soft-skill & HR-level evaluation.
 
-Generates compatibility scores
+Flags concerns or inconsistencies.
 
-Screener Agent
+5. Recommender Agent
 
-Runs HR-style screening
+Summarizes all results.
 
-Flags risks or inconsistencies
+Provides the final Hire / No Hire decision.
 
-Recommender Agent
-
-Produces the final output summary
-
-Generates the "Hire / No Hire" recommendation
+📌 Tech Stack
+Component	Technology
+Language	Python 3.10+
+Framework	Streamlit
+AI Model	Google Gemini 1.5
+PDF Parsing	pdfminer.six
+Architecture	Multi-Agent Orchestration
