@@ -1,0 +1,9 @@
+2025-11-19 11:06:56,110 - AI_Recruiter - ERROR - Processing error: 'charmap' codec can't encode character '\u2192' in position 2012: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\Naresh Damera\Desktop\Projects\Multi-agent-Ai-Recuritment-agent\app.py", line 202, in main
+    f.write(str(result))
+    ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Naresh Damera\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 2012: character maps to <undefined>
